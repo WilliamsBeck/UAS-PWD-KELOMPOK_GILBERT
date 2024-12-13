@@ -1,0 +1,543 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    background-color: #fff7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container-1 img{
+
+    width: 100vw;
+    height: 50vw;
+    object-fit: cover;
+}
+
+.container-2{
+
+    max-width: 100%;
+    height: 100%;
+    margin-top: 70px;
+}
+
+.emote-1 {
+
+    justify-content: center;
+    display: flex;
+}
+
+.container-2 img{
+
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-2 h1{
+
+    text-align: center;
+    align-items: center;
+    font-size: 30pt;
+    margin-top: -8px;
+}
+
+
+.container-3 {
+
+    margin-top: 100px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 1000px;
+    height: 500px;
+    transition: 0.5s;
+    margin-left: 420px;
+}
+
+
+.container-3 .box {
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-size: cover;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.container-3:has(.one:hover) {
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr ;
+}
+
+.container-3:has(.two:hover) {
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-3:has(.three:hover) {
+    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr ;
+}
+
+
+.container-3:has(.four:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr ;
+}
+  
+.container-3:has(.five:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr ;
+}
+
+.container-3:has(.six:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr ;
+}
+
+.container-3 .box::after {
+
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100px;
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px 10px;
+    white-space: nowrap;
+    transition: 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    opacity: 0;
+    transition-delay: 0s;
+    -webkit-box-reflect: below 2px linear-gradiennt(transparant, black);
+}
+
+.container-3 .box:hover::after {
+
+    opacity: 1;
+    bottom: -60px;
+    transition-delay: 0,25s;
+}
+
+
+.container-4 {
+  
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 18px;
+    width: 1200px;
+    height: 500px;
+    transition: 0.5s;
+    margin-left: 350px;
+}
+
+.container-4 .box {
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-size: cover;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+.container-4:has(.one:hover) {
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-4:has(.two:hover) {
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-4:has(.three:hover) {
+    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-4:has(.four:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-4:has(.five:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+}
+
+.container-4:has(.six:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr;
+}
+
+.container-4:has(.seven:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+}
+
+.container-4 .box::after {
+
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100px;
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px 10px;
+    white-space: nowrap;
+    transition: 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    opacity: 0;
+    transition-delay: 0s;
+    -webkit-box-reflect: below 2px linear-gradiennt(transparant, black);
+}
+
+.container-4 .box:hover::after {
+
+    opacity: 1;
+    bottom: -60px;
+    transition-delay: 0.25s;
+}
+
+
+.container-5 {
+  
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 8px;
+    width: 1500px;
+    height: 500px;
+    transition: 0.5s;
+    margin-left: 200px;
+}
+
+.container-5 .box {
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-size: cover;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.container-5:has(.one:hover) {
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-5:has(.two:hover) {
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-5:has(.three:hover) {
+    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+
+.container-5:has(.four:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+  
+.container-5:has(.five:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-5:has(.six:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-5:has(.seven:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-5:has(.eight:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-5:has(.nine:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container-5:has(.ten:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+}
+  
+.container-5:has(.eleven:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr 0.5fr;
+}
+
+.container-5:has(.twelve:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+}
+
+.container-5 .box::after {
+
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100px;
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px 10px;
+    white-space: nowrap;
+    transition: 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    opacity: 0;
+    transition-delay: 0.25s;
+    -webkit-box-reflect: below 2px linear-gradiennt(transparant, black);
+}
+
+.container-5 .box:hover::after {
+
+    opacity: 1;
+    bottom: -60px;
+    transition-delay: 0.5s;
+}
+
+#font-1 {
+   
+    font-size: 20pt;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -20px;
+}
+
+#font-2 {
+
+    font-size: 20pt;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 90px;
+}
+
+#font-3 {
+
+    font-size: 20pt;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 90px;
+}
+
+.ready-order {
+
+    margin-top: 150px;
+    margin-bottom: -150px;
+    display: flex;
+    justify-content: center;
+}
+
+.ready-order button {
+
+    color: white;
+    padding: 0.7em 1.7em;
+    font-size: 17pt;
+    border-radius: 0.5em;
+    background: #db0303;
+    cursor: pointer;
+    border: 1px solid #db0303;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #770000, -6px -6px 12px #bdbaba;
+    width: 250px;
+    height: 70px;
+}
+  
+.ready-order button:active {
+
+    color: #ffffff;
+    box-shadow: 0px 0px 0px #ffd1d1, 0px 0px 0px #690000, inset 4px 4px 12px #770000, inset -4px -4px 12px #690000;
+}
+
+.footer-1{
+
+    background-color: rgb(228, 11, 11);
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    border-radius: 120px 120px 0 0;
+    margin-top: 300px;
+}
+
+.footer-left{
+
+    width: 45%;
+    height: auto;
+    place-items: center;
+    display: flex;
+    justify-items: center;
+}
+
+.footer-left img{
+   
+    place-items: center;
+    width: 800px;
+}
+
+.footer-right{
+   
+    align-content: center;    
+    width: 55%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.footer-right h3{
+
+    color: white;
+    font-size: 25pt;
+}
+
+.footer-right p{
+
+    color: white;
+    font-size: 16pt;
+    font-family: "robot", sans-serif;
+    margin-top: 10px;
+}
+
+.fr-1{
+    margin-bottom: 25px;
+}
+
+.fr-2{
+    margin-bottom: 25px;
+}
+
+.fr-4{
+
+    display: flex;
+    gap: 70px;
+}
+
+.fr-4 img{
+
+    width: 120px;
+    margin-top: 20px;
+}
+
+.fr-4 h4{
+
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.copyrights {
+
+    margin-top: -10px;
+    padding-bottom: 50px;
+    background-color: rgb(228, 11, 11);
+    text-align: center;
+}
+
+.copyrights a {
+
+    font-family: roboto;
+    color: rgb(223, 217, 217);
+    font-size: 16px;
+    text-decoration: none;
+    word-spacing: 5px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1500px) {
+
+    .container-3{
+
+        width: 900px;
+        height: 400px;
+    }
+
+    .container-4 {
+
+        width: 1100px;
+        height: 400px; 
+    }
+    
+
+    .container-5 {
+
+        grid-gap: 8px;
+        width: 1400px;
+        height: 400px; 
+    }
+
+    .footer-left {
+        display: none;
+    }
+
+    .fr-4{
+        gap: 60px;
+    }
+
+    .fr-4 img{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .container-3{
+
+        width: 800px;
+        height: 300px;
+    }
+
+    .container-4 {
+
+        width: 1000px;
+        height: 300px; 
+    }
+
+    .container-5 {
+
+        grid-gap: 8px;
+        width: 1300px;
+        height: 300px; 
+    }
+
+    .fr-4{
+        gap: 50px;
+    }
+
+    .fr-4 img{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .container-3{
+
+        width: 700px;
+        height: 200px;
+    }
+
+    .container-4 {
+
+        width: 900px;
+        height: 200px; 
+    }
+
+    .container-5 {
+        
+        grid-gap: 8px;
+        width: 1200px;
+        height: 200px; 
+    }
+
+    .fr-4{
+        gap: 40px;
+    }
+
+    .fr-4 img{
+        width: 60px;
+    }
+}
+
+
+
