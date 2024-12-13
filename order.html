@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIXUE - Order</title>
+    <link rel="stylesheet" href="Order.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <img src="GIF-3.gif" alt="" />
+        <h1>XUELING - Mixue Keliling</h1>
+      </div>
+
+      <!-- Daftar Menu Makanan -->
+      <h3>Fresh Ice Cream</h3>
+      <div class="menu-item" id="item1">
+        <img id="myImg" src="menu1.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Boba Sundae ⭐</h3>
+          <p>Rp. 16,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item1', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity1"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item1', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item2">
+        <img
+          aria-invalid="myImg"
+          src="menu2.jpg"
+          alt=""
+          onclick="openModal(this)"
+        />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Mango Sundae</h3>
+          <p>Rp. 16,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item2', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity2"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item2', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item3">
+        <img id="myImg" src="menu3.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Oreo Sundae</h3>
+          <p>Rp. 16,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item3', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity3"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item3', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item4">
+        <img id="myImg" src="menu4.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Strawberry Lucky Sundae ⭐</h3>
+          <p>Rp. 16,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item4', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity4"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item4', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item5">
+        <img id="myImg" src="menu5.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Chocolate Lucky Sundae</h3>
+          <p>Rp. 16,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item5', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity5"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item5', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item6">
+        <img id="myImg" src="menu6.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Original Sundae</h3>
+          <p>Rp. 16,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item6', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity6"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item6', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <h3>Milk Tea</h3>
+      <div class="menu-item" id="item7">
+        <img id="myImg" src="menu7.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Brown Pearl Milk Tea ⭐</h3>
+          <p>Rp. 19,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item7', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity7"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item7', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item8">
+        <img
+          aria-invalid="myImg"
+          src="menu8.jpg"
+          alt=""
+          onclick="openModal(this)"
+        />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Pearl Milk Tea</h3>
+          <p>Rp. 22,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item8', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity8"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item8', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item9">
+        <img id="myImg" src="menu9.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Coconut Milk Tea</h3>
+          <p>Rp. 22,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item9', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity9"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item9', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item10">
+        <img id="myImg" src="menu10.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Red bean Milk Tea</h3>
+          <p>Rp. 22,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item10', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity10"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item10', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item11">
+        <img id="myImg" src="menu11.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Oats Milk Tea</h3>
+          <p>Rp. 22,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item11', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity11"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item11', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item12">
+        <img id="myImg" src="menu12.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Twin Toppings Milk Tea</h3>
+          <p>Rp. 22,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item12', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity12"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item12', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item13">
+        <img id="myImg" src="menu13.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Supreme Mixed Milk Tea ⭐</h3>
+          <p>Rp. 22,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item13', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity13"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item13', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <h3>Real Fruit Tea</h3>
+      <div class="menu-item" id="item14">
+        <img id="myImg" src="menu14.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Fresh Squeezed Lemonade ⭐</h3>
+          <p>Rp. 10.000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item14', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity14"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item14', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item15">
+        <img
+          aria-invalid="myImg"
+          src="menu15.jpg"
+          alt=""
+          onclick="openModal(this)"
+        />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Lemon Jasmine Tea</h3>
+          <p>Rp. 12,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item15', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity15"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item15', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item16">
+        <img id="myImg" src="menu16.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Lemon Earl Grey Tea</h3>
+          <p>Rp. 12,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item16', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity16"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item16', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item17">
+        <img id="myImg" src="menu17.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Creamy Mango Boba ⭐</h3>
+          <p>Rp. 22,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item17', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity17"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item17', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item18">
+        <img id="myImg" src="menu18.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Hawaiian Fruit Tea</h3>
+          <p>Rp. 22,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item18', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity18"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item18', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item19">
+        <img id="myImg" src="menu19.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Passion Fruit Jasmine Tea</h3>
+          <p>Rp. 20,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item19', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity19"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item19', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item20">
+        <img id="myImg" src="menu20.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Peach Earl Grey Tea ⭐</h3>
+          <p>Rp. 16,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item20', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity20"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item20', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item21">
+        <img id="myImg" src="menu21.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Peach Jasmine Tea</h3>
+          <p>Rp. 16,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item21', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity21"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item21', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item22">
+        <img id="myImg" src="menu22.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Jasmine Tea with 2 Toppings</h3>
+          <p>Rp. 13,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item22', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity22"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item22', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item23">
+        <img id="myImg" src="menu23.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Earl Grey Tea with 2 Toppings</h3>
+          <p>Rp. 13,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item23', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity23"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item23', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item24">
+        <img id="myImg" src="menu24.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Original Jasmine Tea</h3>
+          <p>Rp. 10,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item24', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity24"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item24', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item" id="item25">
+        <img id="myImg" src="menu25.jpg" alt="" onclick="openModal(this)" />
+
+        <div id="myModal">
+          <span id="zoom" onclick="closeModal()">&times;</span>
+          <img id="modalImg" />
+        </div>
+
+        <div class="menu-info">
+          <h3>Original Earl Grey Tea</h3>
+          <p>Rp. 10,000</p>
+        </div>
+
+        <div class="quantity">
+          <div class="kotak-btn">
+            <button type="image" onclick="updateQuantity('item25', -1)">
+              <img src="btn-minus.png" alt="" />
+            </button>
+            <input
+              type="number"
+              class="pcs"
+              id="quantity25"
+              value="0"
+              min="0"
+              readonly
+            />
+            <button type="image" onclick="updateQuantity('item25', 1)">
+              <img src="btn-plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-2">
+      <!-- Total Harga -->
+      <div class="total-price">Total : Rp. <span id="totalPrice">0</span></div>
+
+      <!-- Ringkasan Pesanan -->
+      <div class="order-summary">
+        <h3>Ringkasan Pesanan</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Menu</th>
+              <th>Cup</th>
+              <th>Harga</th>
+            </tr>
+          </thead>
+          <tbody id="orderTableBody">
+            <!-- Pesanan akan ditampilkan di sini -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tombol Submit -->
+      <button class="submit-order" onclick="submitOrder()">Order Now</button>
+    </div>
+  </body>
+  <script src="Order.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
